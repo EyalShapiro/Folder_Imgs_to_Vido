@@ -1,2 +1,5 @@
 opencv-python
 numpy
+scikit-learn
+ultralytics
+pillow

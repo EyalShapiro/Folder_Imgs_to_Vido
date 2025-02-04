@@ -19,6 +19,7 @@ This script converts images from a folder into a video. It processes images in p
 - Maintains aspect ratio with black padding.
 - Multithreaded image loading for speed.
 - Randomized image order in the video.
+- AI-powered smooth transitions and object detection.
 
 ## Installation
 
