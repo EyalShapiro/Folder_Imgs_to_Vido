@@ -6,9 +6,10 @@ from concurrent.futures import ThreadPoolExecutor
 from sklearn.cluster import KMeans
 from ultralytics import YOLO
 from PIL import Image
+from model.HeicConverterPng import HeicConverterPng
 
 # Import constants
-from config import (
+from constants.config import (
     FOLDER_PATH,
     OUTPUT_VIDEO,
     FPS_SINGLE,
@@ -38,6 +39,9 @@ def load_and_process_image(img_path):
         except Exception as e:
             print(f"⚠️ Failed to convert GIF: {img_path}, Error: {e}")
             return None, None
+    elif img_path.lower().endswith(".heic"):
+        convertHeic = HeicConverterPng()
+        convertHeic.convert_heic_to_png_and_replace(img_path)
 
     img = cv2.imread(img_path)
     if img is None:

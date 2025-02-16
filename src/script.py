@@ -8,7 +8,7 @@ import random
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 
-from config import (
+from constants.config import (
     get_full_path,
     FOLDER_PATH,
     OUTPUT_VIDEO,
